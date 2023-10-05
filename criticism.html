@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Criticization</title>
+    <link rel="stylesheet" href="sen2.css">
+    <style>
+        /* Add your CSS styling here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.main {
+    padding: 20px;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    background-image: url('back.jpg'); /* Specify the path to your background image */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Fix the background image in place */
+    background-position: center; /* Center the background image */
+    font-family: 'Times New Roman', Times, serif; /* Specify your desired font family */
+    color: #333; /* Set the text color */
+}
+
+.container {
+    max-width: 1600px; /* Adjust the width of your content container as needed */
+    margin: 0 auto; /* Center the content container horizontally */
+    padding: 20px; /* Add some padding to the content container */
+     /* Add a semi-transparent white background to your content */
+}
+
+p {
+    font-size: 16px; /* Set the text font size */
+    line-height: 1.5; /* Set the line height for better readability */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Criticization Form</h1>
+    </header>
+    <main>
+        <section class="feedback-form">
+            <h2>Provide Your Criticization</h2>
+            <form id="feedbackForm" onsubmit="submitForm(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="feedback">Your Criticsm:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 @Zamsar
+    </footer>
+    <script src="sen.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background: url('images/water.jpg'); /* Replace 'water.jpg' with your water background image */
+            animation: waterEffect 10s infinite linear;
+        }
+
+        @keyframes waterEffect {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 100% 0;
+            }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+        .selected {
+            border: 2px solid #007BFF;
+        }
+
+        .selected img {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Photo Gallery</h1>
+    <p>Click on images to select them:</p>
+
+    <div class="gallery" id="photoGallery">
+        <!-- Your images go here -->
+        <img src="images/senator.png" alt="Image 1">
+        <img src="images/pr.jpg" alt="Image 2">
+        <img src="images/gv.jpg" alt="Image 2">
+        <!-- Add more images here -->
+    </div>
+
+    <h2>Selected Images:</h2>
+    <div id="selectedImages">
+        <!-- Selected images will be displayed here -->
+    </div>
+
+    <script>
+        const gallery = document.getElementById('photoGallery');
+        const selectedImagesContainer = document.getElementById('selectedImages');
+
+        gallery.addEventListener('click', (event) => {
+            if (event.target.tagName === 'IMG') {
+                event.target.classList.toggle('selected');
+                updateSelectedImages();
+            }
+        });
+
+        function updateSelectedImages() {
+            selectedImagesContainer.innerHTML = '';
+            const selectedImages = document.querySelectorAll('.selected');
+
+            selectedImages.item((image) => {
+                const selectedImage = image.cloneNode(true);
+                selectedImagesContainer.appendChild(selectedImage);
+            });
+        }
+    </script>
+</body>
+</html>

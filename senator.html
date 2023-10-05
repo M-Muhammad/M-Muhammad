@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senator's Website</title>
+    <link rel="stylesheet" href="senator.css">
+    <link rel="stylesheet" href="sen2.css">
+    <style>
+        /* Reset some default styles for better consistency across browsers */
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font styles for the body */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    background-image: url("images/senator.png");
+    animation: waterEffect 7s infinite linear;
+}
+@keyframes waterEffect {
+  0%, 100% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Style the header section */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Style the senator's name */
+h1 {
+    font-size: 20px;
+}
+
+/* Style the navigation menu */
+nav{ 
+  padding-bottom: 5px;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: underline;
+    color: lightblue;
+    font-weight: bold;
+}
+
+/* Style the senator's photo */
+img {
+    border-radius: 20%;
+    border: 2px solid #fff;
+}
+
+/* Add hover effect to navigation links */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style the main content area (add your own styles here) */
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+ul.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.nav-menu li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  ul.nav-menu li a:hover {
+    color: #007bff; /* Change the color on hover */
+  }
+
+  ul.nav-menu li:hover ul.sub-menu {
+    display: block; /* Display sub-menu on hover */    
+  }
+  ul.sub-menu li {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+/* Style the "About Us" heading */
+#about h1 {
+    font-size: 24px; /* Font size */
+    color: #333; /* Text color */
+    margin-bottom: 10px; /* Margin at the bottom of the heading */
+}
+
+/* Style the "About Us" paragraph */
+#about p {
+    font-size: 16px; /* Font size */
+    color: #555; /* Text color */
+}
+
+/* Style the "News/Updates" section */
+#news {
+    background-color: #f8f8f8; /* Background color */
+    padding: 20px; /* Padding around the section */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle 3D effect */
+    display: transparent;
+}
+
+/* Style the "News and Updates" heading */
+#news h2 {
+    font-size: 20px; /* Font size */
+    color: #333; /* Text color */
+    margin-bottom: 10px; /* Margin at the bottom of the heading */
+}
+
+/* Style the list items in the "News/Updates" section */
+#news ul {
+    list-style-type: none; /* Remove bullet points */
+}
+
+/* Style the subheadings in the list items */
+#news h3 {
+    font-size: 18px; /* Font size */
+    color: #444; /* Text color */
+    margin-bottom: 5px; /* Margin at the bottom of the subheading */
+}
+
+/* Style the paragraphs in the list items */
+#news p {
+    font-size: 16px; /* Font size */
+    color: #666; /* Text color */
+}
+
+/* Style the header section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Style the navigation menu */
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+/* Style the image slider */
+.slider {
+    display: none;
+    text-align: center;
+    size: 50%;
+}
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+/* Style the navigation menu */
+.h1 nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: lightblue;
+    font-weight: bold;
+}
+/* Style for the h2 headings */
+h2 {
+    color: #333; /* Text color for headings */
+    margin-top: 20px; /* Add spacing above headings */
+}
+
+/* Style for the iframe */
+iframe {
+    width: 90%; /* Make the iframe responsive within its container */
+    border: blue; /* Remove iframe border */
+    border-radius: 2%;
+}
+
+/* Style for contact information and feedback form */
+p {
+    color: #666; /* Text color for contact information */
+}
+
+label {
+    font-weight: bold; /* Make labels bold */
+}
+
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+    color: #0056b3; /* Link color on hover */
+}
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Link color */
+    font-weight: bold;
+}
+
+/* Style the sections */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a border for separation */
+    background-color: #f5f5f5; /* Background color for sections */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+}
+ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li img {
+            max-width: 30px; /* Adjust the maximum width as needed */
+            max-height: 30px; /* Adjust the maximum height as needed */
+            margin-right: 10px; /* Add some spacing between the image and text */
+        }
+        footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-link img {
+    width: 20px; /* Adjust the width as needed */
+    height: auto;
+}    
+
+footer .li{
+        justify-content: space-between;
+        justify-items: auto;
+        margin-bottom: 10px;
+    }
+    /* CSS for the sub-menu items */
+ .has-submenu {
+    position: relative;
+    display: ruby-text-container;
+}
+
+.has-submenu a {
+    text-decoration: none;
+    color: lightblue;
+    padding: 5px 10px;
+}
+
+/* Style the submenu */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    background-color: #333;
+    padding: 5px;
+    list-style: none;
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+
+/* Style the submenu items */
+.sub-menu li {
+    margin-top: 5px;
+}
+
+/* Show the submenu on hover */
+.has-submenu:hover .sub-menu {
+    display: initial;
+}
+.hover{
+    text-decoration: underline;
+}
+footer{
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer .social-link{
+    height: 0.8cm;
+}
+.transparent-section{
+    background-color: rgba(83, 81, 81, 0.5);
+    padding: 20px;
+    font-size: 12pt;
+    color: #0056b3;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header>
+    
+        <img src="images/senator.png" alt="Senator's Photo" width="100" height="100">
+        <p><h1> Distinguish Senator Alhaji Garba Musa Maidoki <br> Kebbi South Zuru-Yauri</h1></p>
+  
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li class="has-submenu" style="text-align: center;" ><a href="about.html" style="text-align: center;">About</a>
+                    <ul class="sub-menu">
+                      <li><a href="https://google.com">Vision</a></li>
+                      <li><a href="#">Mission</a></li>
+                    </ul>
+                  </li>
+                <li class="has-submenu"><a href="">Community Well-Beings</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Health</a></li>
+                <li><a href="#">Security</a></li>
+                <li class="has-submenu"><a href="#">Eduction</a>
+                    <ul class="sub-menu">
+                    </ul>
+                     <li><a href="#">Scholarship</a></li>
+                </li>
+                    </ul>
+                </li>
+                <li class="has-submenu"><a href="#">Empowerment</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Women Empowerment</a></li>
+                        <li><a href="#">Youth Empowerment</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Agricultural Development</a></li>
+                <li><a href="#">Employement Opportunity</a></li>
+                <li class="has-submenu"><a href="#">Zuru/Yauri Wards</a>
+                    <ul class="sub-menu">
+                        <li><a href="doc/ZURU.pdf" target="_blank">Zuru Ward</a></li>
+                        <li><a href="doc/YAURI.pdf" target="_blank">Yauri Wards</a></li> 
+                    </ul>            
+                    </li>
+                        <li><a href="#">PWD Folder</a></li>   
+              </ul>
+        </nav>
+    </header>
+    <!-- Rest of your website content goes here -->
+<!-- News/Updates Section -->
+<div class="transparent-section">
+    <h2>News and Updates</h2>
+    <ul>
+        <li>
+            <h3>Latest News</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eum magni quo, vel reprehenderit maiores libero adipisci incidunt sunt ducimus laboriosam quam illo sapiente quod pariatur ipsa. Adipisci exercitationem, vel quisquam, nam, nobis suscipit quasi unde tempore atque aperiam fuga eos beatae nulla ad labore eum similique quibusdam blanditiis maiores? Perspiciatis consequuntur soluta quisquam dolorem vero vel, ratione voluptatibus recusandae omnis dignissimos quibusdam veritatis? Nihil, sunt! Perspiciatis aliquid ipsum pariatur ex quis doloribus provident officia ipsa nostrum sequi unde aspernatur quam accusamus, tempora quasi laudantium velit, omnis et vitae eaque est! Ratione quia at sint quas quo fuga, tenetur distinctio.
+
+            </p>
+        </li>
+        <li>
+            <h3>Recent Updates</h3>
+            <p>Check out our recent updates and News <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat natus officiis dolor in culpa debitis sit molestiae molestias enim. Odit ipsa odio fugit sint vitae molestiae cumque similique praesentium non illum quod quae optio, id iusto repudiandae labore culpa eaque expedita corrupti inventore doloribus! Iure modi hic deleniti adipisci quasi?</p>
+        </li>
+    </ul>
+</div>
+<div class="transparent-section">
+    <h1> Others News</h1>
+    <nav>
+        <ol>
+            <li><a href="https://www.noblenews.com.ng/">Blog/News</a></li>
+            <li><a href="photog.html" target="_blank">Photo Gallery</a></li>
+            <li><a href="https://youtu.be/_VqaKKj_HSQ">Videos</a></li>
+        </ol>
+    </nav>
+</div>
+
+    </header>
+    <!-- Events Calendar -->
+    <h2>Events Calendar</h2>
+    <iframe src="" width="500" height="400" frameborder="0" class="transparent-section"></iframe>
+    <!-- Social Media Links -->
+    <footer>
+        <div class="social-links">
+            <ul>
+                <li>
+                    <a href="#" class="social-link"><img src="images/facebook.png" alt="Facebook">Facebook</a>
+                    <a href="#" class="social-link"><img src="images/istagram.jpg" alt="Instagram">Instagram</a>
+                    <a href="#" class="social-link"><img src="images/twitter.png" alt="Twitter">Twitter</a>
+                </li>
+
+            </ul>
+           
+        </div>
+            <li class="has-submenu"><a href="#">Services Desk</a>
+                <ul class="sub-menu">
+                    <li><a href="suggestion.html">Suggession</a></li>
+                    <li><a href="wardcomplian.html">Ward/Unit Complain</a></li>
+                    <li><a href="criticism.html">Critisim</a></li>
+                </ul>            
+                </li>
+    </footer>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sen3.css">
+    <title>Ward/Unit Complaint</title>
+    <style>
+        body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-size: 15px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #007BFF;
+}
+
+select, textarea, input[type="text"], input[type="email"], input[type="tel"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Report a Ward/Unit Complaint</h1>
+    <p>Please use this form to report any issues, concerns, or feedback related to a specific ward or unit within our facility.</p>
+
+    <form action="submit_complaint.php" method="post">
+        <label for="ward">Select Ward/Unit:</label>
+        <select id="ward" name="ward" required>
+            <option value="" disabled selected>Select a Ward/Unit</option>
+            <option value="ward1">Ward 1</option>
+            <option value="ward2">Ward 2</option>
+            <!-- Add more ward options as needed -->
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Your Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="anonymous">Submit Anonymously:</label>
+        <input type="checkbox" id="anonymous" name="anonymous">
+        
+        <button type="submit">Submit Complaint</button>
+    </form>
+</body>
+</html>
+
+    </div>
+    
